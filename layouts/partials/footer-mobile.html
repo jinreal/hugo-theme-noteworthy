@@ -1,12 +1,13 @@
 <footer class="footer-mobile">
-	{{ partial "social.html" . }}
+    {{ partial "social.html" . }}
 
-	<div class="footer-mobile-links">
-		<p><a href="https://jinreal.com" target="_blank" rel="noopener">主页</a></p>
-		<!-- <span class="divider-bar">|</span> -->
-		<!-- <p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p> -->
-	</div>
+    <div class="footer-mobile-links">
+        <p><a href="https://blog.jinreal.com" target="_blank" rel="noopener">牛津的博客</a></p>
+        <span class="divider-bar">|</span>
+        <p><a href="https://jinreal.com" target="_blank" rel="noopener">jinreal.com</a></p>
+        <!-- <p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p> -->
+    </div>
 
-	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
-	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
+    {{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
+    <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
 </footer>
