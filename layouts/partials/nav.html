@@ -5,10 +5,9 @@
   {{ range .Site.Menus.main }}
     <a class="color-link nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
   {{ end }}
-  <ul id="tags-single">
-    <li>Tags:</li>
+  <ul id="tags">
     {{ range .Params.tags }}
-      <li><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a> </li>
+      <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
     {{ end }}
   </ul>
   <a class="color-link nav-link" href="{{ .Site.RSSLink }}" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
